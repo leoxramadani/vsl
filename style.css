@@ -316,8 +316,8 @@ p {
 
 .serv{
 	border:7px solid crimson;
-	width: 400px;
-	height:500px;
+	width: 500px;
+	height:600px;
 	display:inline-block;
 	margin-top:20px;
 	margin-left:10%;
@@ -325,8 +325,8 @@ p {
 }
 
 .serv img{
-	max-width: 450px;
-	max-height: 430px;
+	max-width: 550px;
+	max-height: 530px;
 	display:inline-block;
 	margin-left:20px;
 	margin-top:20px;
@@ -335,10 +335,10 @@ p {
 .vdd{
 	border:7px solid rgb(47, 113, 255);
 	border-top-left-radius: 50px;
-	width:500px;
-	height:350px;
+	width:400px;
+	height:250px;
 	display:inline-block;
-	margin-top:20px;
+	margin-top:10px;
 	margin-left:10%;
 }
 
