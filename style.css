@@ -4,8 +4,7 @@
 	box-sizing: border-box;
 }
 html {
-	font-size: 10px;
-	font-family: 'Montserrat', sans-serif;
+
 	scroll-behavior: smooth;
 }
 body{
@@ -16,7 +15,7 @@ a {
 }
 
 h1.section-title {
-		font-size: 6rem;
+		font-size: 12px;
 	}
 
 	#hero {
@@ -317,8 +316,8 @@ p {
 
 .serv{
 	border:7px solid crimson;
-	width: 300px;
-	height:400px;
+	width: 400px;
+	height:500px;
 	display:inline-block;
 	margin-top:20px;
 	margin-left:10%;
@@ -326,8 +325,8 @@ p {
 }
 
 .serv img{
-	max-width: 350px;
-	max-height: 330px;
+	max-width: 450px;
+	max-height: 430px;
 	display:inline-block;
 	margin-left:20px;
 	margin-top:20px;
@@ -336,8 +335,8 @@ p {
 .vdd{
 	border:7px solid rgb(47, 113, 255);
 	border-top-left-radius: 50px;
-	width:400px;
-	height:250px;
+	width:500px;
+	height:350px;
 	display:inline-block;
 	margin-top:20px;
 	margin-left:10%;
@@ -383,8 +382,8 @@ opacity:1;
 }
 
 .con{
-	width:300px;
-	heighT:150px;
+	width:400px;
+	height:250px;
 	background:rgb(59, 59, 59);
 	margin-left:30px;
 	margin-top:40px;
