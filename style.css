@@ -350,7 +350,7 @@ p {
 
 .abt{
 	width: 60%;
-	height:500px;
+	height:700px;
 	border:5px solid crimson;
 	margin-top:50px;
 	align-content: center;
@@ -358,7 +358,7 @@ p {
 }
 .abt img{
 	max-width:auto;
-	max-height: 500px;
+	max-height: 700px;
 	align-content: center;
 	justify-content: center;
 	opacity: .3;
