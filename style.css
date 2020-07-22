@@ -2,6 +2,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	
 }
 html {
 
@@ -15,7 +16,7 @@ a {
 }
 
 h1.section-title {
-		font-size: 12px;
+		font-size: 14px;
 	}
 
 	#hero {
@@ -102,7 +103,7 @@ p {
 	letter-spacing: .05rem;
 }
 .section-title {
-	font-size: 4rem;
+	font-size: 5rem;
 	font-weight: 300;
 	color: black;
 	margin-bottom: 10px;
@@ -314,8 +315,8 @@ p {
 
 .serv{
 	display:inline-block;
-	width:320px;
-	height:360px;
+	width:420px;
+	height:460px;
 	border:3px solid crimson;
 	background:transparent;
 	margin-left:30px;
@@ -324,13 +325,13 @@ p {
 
 .serv img{
 	display:inline-block;
-	width:315px;
-	height:300px;
+	width:415px;
+	height:400px;
 	margin-top:20px;
 	margin-left:20px;
 	box-shadow: -7px -10px 10px crimson;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
 	.serv {
 		width:80%;
 	}
@@ -403,15 +404,16 @@ p {
 	box-shadow: 4px 7 px 10px crimson;
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:500px){
 
 	.con{
 		width:80%;
+		margin-left:10%;
 	}
 }
 
 
-@media screen and(max-width:400px){
+@media screen and(max-width:500px){
 	.vdd{
 		margin-left:0;
 	}
@@ -444,7 +446,7 @@ p {
 	max-width: 100%;
 	animation: animate calc(8s * var(--i)) linear infinite;
 }
-@media screen and(max-width:400px){
+@media screen and(max-width:500px){
 	.banner .clouds img{
 		animation: animate calc(3s * var(--i)) linear infinite;
 	}
