@@ -330,8 +330,8 @@ p {
 
 .serv{
 
-	display:-moz-inline-grid;
-	width:420px;
+	display: inline-block;
+	width:620px;
 	height:460px;
 	border:3px solid crimson;
 	background:transparent;
@@ -340,7 +340,7 @@ p {
 }
 
 .serv img{
-	display:inline-block;
+
 	width:415px;
 	height:400px;
 	margin-top:20px;
@@ -394,9 +394,9 @@ p {
 	margin-top:20px;
 	margin-left:550px;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width:500px) {
 	.extra img{
-		margin-left:50%;
+		margin-left:30%;
 	}
 }
 
@@ -459,7 +459,7 @@ p {
 .banner .clouds img{
 	position:absolute;
 	bottom:0;
-	max-width: 100%;
+	max-width: 120%;
 	animation: animate calc(8s * var(--i)) linear infinite;
 }
 @media screen and(max-width:500px){
