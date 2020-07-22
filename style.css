@@ -19,12 +19,15 @@ h1.section-title {
 	}
 
 	#hero {
-		background-image: url(./iv2.jpg);
+	
 		background-size:cover;
 		background-position: center;
 		position: relative;
 		z-index: 1;
+		background-size: cover;
+		background-position: bottom;
 	}
+
 	#hero::after {
 		content: '';
 		position: absolute;
@@ -68,9 +71,9 @@ h1.section-title {
 		left: 0;
 		height: 100%;
 		width: 0;
-		background-color: crimson;
 		animation: text_reveal_box 1s ease;
 		animation-delay: .5s;
+		box-shadow: 7px 10px 10px crimson;
 	}
 	#hero h1:nth-child(1) span {
 		animation-delay: .5s;
@@ -85,12 +88,6 @@ h1.section-title {
 	/* End Hero Section */
 	
 
-.container {
-	min-height: 100vh;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 img {
 	height: 100%;
@@ -129,6 +126,7 @@ p {
 	margin-top: 30px;
 	transition: .3s ease;
 	transition-property: background-color, color;
+	
 }
 .cta:hover {
 	color: white;
@@ -313,31 +311,41 @@ p {
     }
 }
 
-.serv{
-	border:7px solid crimson;
-	width: 500px;
-	height:600px;
-	display:inline-block;
-	margin-top:20px;
-	margin-left:10%;
 
+.serv{
+	display:inline-block;
+	width:320px;
+	height:360px;
+	border:3px solid crimson;
+	background:transparent;
+	margin-left:30px;
+	margin-top:24px;
 }
 
 .serv img{
-	max-width: 550px;
-	max-height: 530px;
 	display:inline-block;
-	margin-left:20px;
+	width:315px;
+	height:300px;
 	margin-top:20px;
+	margin-left:20px;
+	box-shadow: -7px -10px 10px crimson;
 }
-
+@media only screen and (max-width: 400px) {
+	.serv {
+		width:80%;
+	}
+	.serv img{
+		width:80%;
+	}
+	
+}
 .vdd{
 	border:7px solid rgb(47, 113, 255);
 	border-top-left-radius: 50px;
-	width:400px;
+	width:300px;
 	height:250px;
 	display:inline-block;
-	margin-top:10px;
+	margin-top:20px;
 	margin-left:10%;
 }
 
@@ -349,44 +357,42 @@ p {
 }
 
 .abt{
-	width: 60%;
-	height:700px;
-	border:5px solid crimson;
+	width: 80%;
+	height:500px;
+
+	box-shadow: 7px 10px 10px crimson;
 	margin-top:50px;
 	align-content: center;
 	justify-content: center;
+	margin-left:10%;
+	
 }
-.abt img{
-	max-width:auto;
-	max-height: 700px;
-	align-content: center;
-	justify-content: center;
-	opacity: .3;
-	z-index:0;
-}
-.abt h3{
-	color:white;
-	font-size:20px;
-	position: absolute;;
+
+.extra img{
+	width:130px;
+	height:130px;
+	border-radius:100px;
+	position:absolute;
 	z-index:1;
-	text-align: center;
+	margin-top:20px;
+	margin-left:550px;
 }
-.abt p{
-	padding:10px;
-position:absolute;
-font-size:15px;
-color:white;
-margin-top:170px;
-opacity:1;
+@media only screen and (max-width: 500px) {
+	.extra img{
+		margin-left:70px;
+	}
 }
+
+
 
 .con{
 	width:400px;
 	height:250px;
-	background:rgb(59, 59, 59);
-	margin-left:30px;
+	background:rgb(70, 69, 69);
+	margin-left:10%;
 	margin-top:40px;
 	display:inline-block;
+	box-shadow: 7px 10px 10px crimson;
 }
 
 .con img{
@@ -394,16 +400,17 @@ opacity:1;
 	height:65px;
 	border-radius:50%;
 	margin-left:40%;
+	box-shadow: 4px 7 px 10px crimson;
 }
 
 @media screen and (max-width:400px){
-	.serv{
-		margin-left:0;
-	}
-	.serv img{
-		margin-left:10px;
+
+	.con{
+		width:80%;
 	}
 }
+
+
 @media screen and(max-width:400px){
 	.vdd{
 		margin-left:0;
@@ -412,3 +419,43 @@ opacity:1;
 		margin-left:10px;
 	}
 }
+
+
+/* #region Clouuds */
+.banner{
+	position:relative;
+	width: 100%;
+	height:100vh;
+	background:url(iv2.jpg);
+	background-size:cover;
+	background-position:bottom;
+}
+.banner .clouds{
+	position:absolute;
+	top:20%;
+	left:0;
+	width:100%;
+	height:80%;
+	overflow:hidden;
+}
+.banner .clouds img{
+	position:absolute;
+	bottom:0;
+	max-width: 100%;
+	animation: animate calc(8s * var(--i)) linear infinite;
+}
+@media screen and(max-width:400px){
+	.banner .clouds img{
+		animation: animate calc(3s * var(--i)) linear infinite;
+	}
+}
+@keyframes animate{
+	0%{
+		transform:translateX(-100%);
+	}
+	100%{
+		transform:translateX(100%);
+	}
+}
+
+/* #endregion */
