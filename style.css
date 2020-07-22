@@ -394,7 +394,7 @@ p {
 	margin-top:20px;
 	margin-left:550px;
 }
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:600px) {
 	.extra img{
 		margin-left:30%;
 	}
@@ -420,7 +420,7 @@ p {
 	box-shadow: 4px 7 px 10px crimson;
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:600px){
 
 	.con{
 		width:80%;
@@ -462,7 +462,7 @@ p {
 	max-width: 120%;
 	animation: animate calc(8s * var(--i)) linear infinite;
 }
-@media screen and(max-width:500px){
+@media screen and(max-width:600px){
 	.banner .clouds img{
 		animation: animate calc(3s * var(--i)) linear infinite;
 	}
