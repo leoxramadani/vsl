@@ -331,7 +331,7 @@ p {
 .serv{
 
 	display: inline-block;
-	width:620px;
+	width:420px;
 	height:460px;
 	border:3px solid crimson;
 	background:transparent;
@@ -403,7 +403,7 @@ p {
 
 
 .con{
-	width:400px;
+	width:80%;
 	height:250px;
 	background:rgb(70, 69, 69);
 	margin-left:10%;
@@ -416,7 +416,7 @@ p {
 	width:65px;
 	height:65px;
 	border-radius:50%;
-	margin-left:40%;
+	margin-left:47%;
 	box-shadow: 4px 7 px 10px crimson;
 }
 
@@ -443,7 +443,7 @@ p {
 .banner{
 	position:relative;
 	width: 100%;
-	height:100vh;
+	height:80vh;
 	background:url(iv2.jpg);
 	background-size:cover;
 	background-position:bottom;
