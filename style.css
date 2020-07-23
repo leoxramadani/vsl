@@ -1,190 +1,479 @@
-<html>
-    <head>
-        <title>Ismet Vejseli</title>
-        <link rel="stylesheet" href="style.css">
-        <body>
-              <!-- Header -->
-  <section id="header">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="#hero"><h1><span>I</span>smet <span>V</span>ejseli</h1></a>
-        </div>
-        <div class="nav-list">
-          <div class="hamburger"><div class="bar"></div></div>
-          <ul>
-            <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#Concerts" data-after="Concerts">Concerts</a></li>
-            <li><a href="#Videos" data-after="Videos">Videos</a></li>
-            <li><a href="#About" data-after="About">About</a></li>
-            <li><a href="#contact" data-after="Contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	
+}
+html {
 
-  <section id="home">
-  <section id="hero">
-    <div class="banner">
-  
-      <div class="clouds">
-          <img src="cloud1.png" style="--i:1;">
-          <img src="cloud2.png" style="--i:2;">
-          <img src="cloud3.png" style="--i:3;">
-          <img src="cloud4.png" style="--i:4;">
-          <img src="cloud5.png" style="--i:5;">
-          <div style="margin-top:240px">
-            <h1 style="font-family: 'Courier New', Courier, monospace; ">Ismet Vejseli<span></span></h1><span>
-            <h1 style="font-family: 'Courier New', Courier, monospace;">Tenor <span></span></h1>
-    
-          </div>
-      </div>
-  </div>
-    
-    <div class="hero container">
-      
+	scroll-behavior: smooth;
+}
+body{
+	background:  rgb(37, 37, 37);
+}
+a {
+	text-decoration: none;
+}
 
-    </div>
-  </section>
-</section>
+h1.section-title {
+		font-size: 14px;
+	}
+
+	#hero {
+	
+		background-size:cover;
+		background-position: center;
+		position: relative;
+		z-index: 1;
+		background-size: cover;
+		background-position: bottom;
+	}
+
+	#hero::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: black;
+		opacity: .7;
+		z-index: -1;
+	}
+	#hero .hero {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 50px;
+		justify-content: flex-start;	
+	}
+	#hero h1 {
+		display: block;
+		width: fit-content;
+		font-size: 4rem;
+		position: relative;
+		color: transparent;
+		animation: text_reveal .5s ease forwards;
+		animation-delay: 1s;
+	}
+	@media only screen and (max-width: 500px) {
+		#hero h1 {
+			font-size:5rem;
+		}
+		.brand h1 {
+			font-size: 4rem;
+			text-transform: uppercase;
+			color: white;
+		}
+		.brand h1 span {
+			color: crimson;
+			font-size:4rem;
+		}
+
+		
+	}
+	#hero h1:nth-child(1) {
+		animation-delay: 1s;
+	}
+	#hero h1:nth-child(2) {
+		animation-delay: 2s;
+	}
+	#hero h1:nth-child(3) {
+		animation: text_reveal_name .5s ease forwards;
+		animation-delay: 3s;
+	}
+	#hero h1 span {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 0;
+		animation: text_reveal_box 1s ease;
+		animation-delay: .5s;
+		box-shadow: 7px 10px 10px crimson;
+	}
+	#hero h1:nth-child(1) span {
+		animation-delay: .5s;
+	}
+	#hero h1:nth-child(2) span {
+		animation-delay: 3.5s;
+	}
+	#hero h1:nth-child(3) span {
+		animation-delay: 2.5s;
+	}
+	
+	/* End Hero Section */
+	
+
+}
+img {
+	height: 100%;
+	width: 100%;
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: .05rem;
+}
+.section-title {
+	font-size: 5rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	text-align: center;
+}
+.section-title span {
+	color: crimson;
+}
+
+.cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid crimson;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	margin-top: 30px;
+	transition: .3s ease;
+	transition-property: background-color, color;
+	
+}
+.cta:hover {
+	color: white;
+	background-color: crimson;
+}
+.brand h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+.brand h1 span {
+	color: crimson;
+}
+
+/* Header section */
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#header .header {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: .3s ease background-color;
+}
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#header .nav-list ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: .5s ease left;
+}
+#header .nav-list ul.active {
+	left: 0%;
+}
+#header .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: .2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#header .nav-list ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: .3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+	color: crimson;
+}
+#header .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(.8);
+	margin-right: 20px;
+}
+#header .hamburger:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid white;
+	animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+	transition: .3s ease;
+	transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+	top: 8px;
+}
+#header .hamburger .bar::before {
+	bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+	bottom: 0;
+}
+#header .hamburger.active .bar::after {
+	top: 0;
+}
+/* End Header section */
 
 
-<section id="Concerts">
-  
-<h1 style="color:white;text-align:center;font-size:30px;margin-top:50px;">Concerts</h1>
+/* Keyframes */
+@keyframes hamburger_puls {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes text_reveal {
+	100% {
+		color: white;
+	}
+}
+@keyframes text_reveal_name {
+	100% {
+		color: crimson;
+		font-weight: 500;
+	}
+}
+/* End Keyframes */
 
-<div class="serv"><img src="iv2.jpg" >
-<h1 style="color:white;font-family: sans-serif;text-align: center;font-size:25px;">Moscow, Russia</h1>
-</div>
-<div class="serv"><img src="iv3.jpg">
-  <h1 style="color:white;font-family: sans-serif;text-align: center;font-size:25px;">Sofia, Bulgaria</h1>
-</div>
-<div class="serv"><img src="iv4.jpg" >
-  <h1 style="color:white;font-family: sans-serif;text-align: center;font-size:25px;">Tirana, Albania</h1>
-</div>
-
-<div class="serv"><img src="iv5.jpg" >
-  <h1 style="color:white;font-family: sans-serif;text-align: center;font-size:25px;">Elbasan, Albania</h1>
-</div>
-
-<div class="serv"><img src="iv6.jpg" >
-  <h1 style="color:white;font-family: sans-serif;text-align: center;font-size:25px;">Forli, Italy</h1>
-</div>
-
-<div class="serv"><img src="iv7.jpg" >
-  <h1 style="color:white;font-family: sans-serif;text-align: center;font-size:25px;">Kumanovo, Macedonia </h1>
-</div>
-
-<div class="serv"><img src="iv1.jpg" >
-  <h1 style="color:white;font-family: sans-serif;text-align: center;font-size:25px;">Skopje, Macedonia </h1>
-</div>
-
-</section>
-
-<h1 style="color:white;text-align:center;font-size:30px;margin-top:50px;">Videos</h1>
-
-
-<section id="Videos" style="margin-top:50px;">
-
-<div class="vdd">
-  <video width="300"  controls>
-    <source src="v1.mp4" type="video/mp4">
-    Your browser does not support HTML video.
-  </video>
-</div>
-
-<div class="vdd">
-  <video width="300"  controls>
-    <source src="v2.mp4" type="video/mp4">
-    Your browser does not support HTML video.
-  </video>
-</div>
-
-<div class="vdd">
-  <video width="300"  controls>
-    <source src="v3.mp4" type="video/mp4">
-    Your browser does not support HTML video.
-  </video>
-</div>
-
-<div class="vdd"> 
-   <video width="300" height="200" controls>
-  <source src="v4.mp4" type="video/mp4">
-  Your browser does not support HTML video.
-</video>
-</div>
-
-<div class="vdd">
-  <video width="300"  controls>
-    <source src="v5.mp4" type="video/mp4">
-    Your browser does not support HTML video.
-  </video>
-</div>
-
-<div class="vdd">
-  <video width="300" height="200"  controls>
-    <source src="v6.mp4" type="video/mp4">
-    Your browser does not support HTML video.
-  </video>
-
-</div>
-</section>
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) {
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+    }
+}
 
 
-<section id="About">
-<h1 style="color:white;text-align:center;font-size:30px;margin-top:150px;">About</h1>
+.serv{
 
+	display: inline-block;
+	width:420px;
+	height:460px;
+	border:3px solid crimson;
+	background:transparent;
+	margin-left:30px;
+	margin-top:24px;
+}
 
-<div class="abt">
-  <div class="extra">
-  <img src="iv8.jpg">
-</div>
-  <img src="iv9.jpg" style="width: 100%; height:100%;opacity: .4;z-index:0;">
+.serv img{
 
-</div>
+	width:415px;
+	height:400px;
+	margin-top:20px;
+	margin-left:20px;
+	box-shadow: -7px -10px 10px crimson;
+}
+@media only screen and (max-width: 500px) {
+	.serv {
+		width:80%;
+	}
+	.serv img{
+		width:80%;
+	}
+	
+}
+.vdd{
+	border:7px solid rgb(47, 113, 255);
+	border-top-left-radius: 50px;
+	width:300px;
+	height:250px;
+	display:inline-block;
+	margin-top:20px;
+	margin-left:10%;
+}
 
-</section>
+.vdd video{
 
+	display:inline-block;
+	margin-left:20px;
+	margin-top:25px;
+}
 
+.abt{
+	width: 80%;
+	height:500px;
 
-<section id="Contact">
+	box-shadow: 7px 10px 10px crimson;
+	margin-top:50px;
+	align-content: center;
+	justify-content: center;
+	margin-left:10%;
+	
+}
 
-    <h1 style="color:white;text-align:center;font-size:30px;margin-top:150px;">Contact</h1>
-
-<div class="con">
-  <img src="ic1.png">
-  <h1 style="text-align: center;color:white;margin-top:28px;font-size: 32px;"><b>Phone number</b></h1>
-  <p style="color:white;text-align: center;"> +389-77-77-00</p>
-</div>
-
-<div class="con">
-  <img src="ic2.png">
-  <h1 style="text-align:center;color:white;margin-top:30px;font-size: 32px;"><b>Instagram</b></h1>
-  <p style="color:white;text-align: center;font-size: 28px;">@vslismet</p>
-</div>
-
-<div class="con">
-  <img src="ic5.png" style="border-radius:100px;">
-  <h1 style="text-align:center;color:white;margin-top:30px;font-size: 32px;"><b>Facebook</b></h1>
-  <p style="color:white;text-align: center;font-size: 28px;">facebook.com/ismet.veseli</p>
-
-</div>
+.extra img{
+	width:130px;
+	height:130px;
+	border-radius:100px;
+	position:absolute;
+	z-index:1;
+	margin-top:20px;
+	margin-left:550px;
+}
+@media only screen and (max-width:600px) {
+	.extra img{
+		margin-left:30%;
+	}
+}
 
 
 
-<br><br><br><br><br><br><br>
-</section>
+.con{
+	width:80%;
+	height:300px;
+	background:rgb(70, 69, 69);
+	margin-left:10%;
+	margin-top:40px;
+	display:inline-block;
+	box-shadow: 7px 10px 10px crimson;
+}
+
+.con img{
+	width:65px;
+	height:65px;
+	border-radius:50%;
+	margin-left:47%;
+	box-shadow: 4px 7 px 10px crimson;
+}
+
+@media screen and (max-width:600px){
+
+	.con{
+		width:80%;
+		margin-left:10%;
+	}
+}
 
 
+@media screen and(max-width:500px){
+	.vdd{
+		margin-left:0;
+	}
+	.vdd video{
+		margin-left:10px;
+	}
+}
 
 
+/* #region Clouuds */
+.banner{
+	position:relative;
+	width: 100%;
+	height:80vh;
+	background:url(iv2.jpg);
+	background-size:cover;
+	background-position:bottom;
+}
+.banner .clouds{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.banner .clouds img{
+	position:absolute;
+	bottom:0;
+	max-width: 120%;
+	animation: animate calc(8s * var(--i)) linear infinite;
+}
+@media screen and(max-width:600px){
+	.banner .clouds img{
+		animation: animate calc(3s * var(--i)) linear infinite;
+	}
+}
+@keyframes animate{
+	0%{
+		transform:translateX(-100%);
+	}
+	100%{
+		transform:translateX(100%);
+	}
+}
 
-
-
-<script src="./app.js"></script>
-
-
-        </body>
-    </head>
-</html>
+/* #endregion */
