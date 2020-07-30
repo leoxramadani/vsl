@@ -14,7 +14,7 @@ body{
 a {
 	text-decoration: none;
 }
-
+/* #region hero */
 h1.section-title {
 		font-size: 14px;
 	}
@@ -103,8 +103,8 @@ h1.section-title {
 	
 	/* End Hero Section */
 	
+/* #endregion */
 
-}
 img {
 	height: 100%;
 	width: 100%;
@@ -117,6 +117,7 @@ p {
 	font-weight: 300;
 	letter-spacing: .05rem;
 }
+/* #region home */
 .section-title {
 	font-size: 5rem;
 	font-weight: 300;
@@ -326,10 +327,9 @@ p {
 		padding: 20px 60px;
     }
 }
-
+/* #endregion */
 
 .serv{
-
 	display: inline-block;
 	width:420px;
 	height:460px;
@@ -337,16 +337,38 @@ p {
 	background:transparent;
 	margin-left:30px;
 	margin-top:24px;
+	transition: 0.5s;
 }
 
 .serv img{
-
 	width:415px;
 	height:400px;
 	margin-top:20px;
 	margin-left:20px;
 	box-shadow: -7px -10px 10px crimson;
 }
+.serv p{
+	text-align: center;
+	margin-top:-10;
+	color:crimson;
+	font-size:26px;
+	opacity:0;
+	transition: 1s;
+}
+.serv:hover{
+	height:520px;
+
+}	
+.serv:hover p{
+opacity:1;
+}
+.serv h1{
+	color:crimson;
+	font-family:'Times New Roman', Times, serif;
+	text-align: center;
+	font-size:25px;
+}
+
 @media only screen and (max-width: 500px) {
 	.serv {
 		width:80%;
@@ -371,6 +393,7 @@ p {
 	display:inline-block;
 	margin-left:20px;
 	margin-top:25px;
+	box-shadow: -7px -10px 10px rgb(47, 113, 255);;
 }
 
 .abt{
