@@ -2,6 +2,9 @@
     <head>
         <title>Ismet Vejseli</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <body>
               <!-- Header -->
   <section id="header">
@@ -26,8 +29,8 @@
 
   <section id="home">
   <section id="hero">
+
     <div class="banner">
-  
       <div class="clouds">
           <img src="cloud1.png" style="--i:1;">
           <img src="cloud2.png" style="--i:2;">
@@ -54,49 +57,62 @@
   
 <h1 style="color:white;text-align:center;font-size:30px;margin-top:50px;text-shadow: 5px 5px #FF0000;">Concerts</h1>
 
+<div data-aos="flip-left" style="display: inline-block;">
 <div class="serv"><img src="iv1.jpg" >
   <h1>Skopje, Macedonia </h1>
   <p style="margin-right:50px;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
   <p>July 15, 2020</p>
 </div>
+</div>
 
+<div data-aos="flip-right" style="display: inline-block;">
 <div class="serv"><img src="iv2.jpg" >
 <h1>Moscow, Russia</h1>
 <p style="margin-right:50px;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
 <p>December 9, 2019</p>
 </div>
+</div>
 
-
-
+<div data-aos="flip-left" style="display: inline-block;">
 <div class="serv"><img src="iv3.jpg">
   <h1>Sofia, Bulgaria</h1>
   <p style="margin-right:50px;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
   <p>November 11, 2019</p>
 </div>
+</div>
 
+<div data-aos="flip-right"  style="display: inline-block;">
 <div class="serv"><img src="iv4.jpg" >
   <h1>Tirana, Albania</h1>
   <p style="margin-right:50px;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
   <p>November 9, 2018</p>
 </div>
+</div>
 
+<div data-aos="flip-left"  style="display: inline-block;">
 <div class="serv"><img src="iv5.jpg" >
   <h1 >Elbasan, Albania</h1>
   <p style="margin-right:50px;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
   <p>October 25, 2018 </p>
 </div>
+</div>
 
+<div data-aos="flip-right"  style="display: inline-block">
 <div class="serv"><img src="iv6.jpg" >
   <h1>Forli, Italy</h1>
   <p style="margin-right:50px;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
   <p>September 9, 2016</p>
 </div>
+</div>
 
+<div data-aos="flip-left"  style="display: inline-block;">
 <div class="serv"><img src="iv7.jpg" >
   <h1>Kumanovo, Macedonia </h1>
   <p style="margin-right:50px;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
   <p>May 21, 2014</p>
 </div>
+</div>
+
 
 
 
@@ -194,10 +210,16 @@
 </div>
 
 
-
-<br><br><br><br><br><br><br>
 </section>
-
+<center>
+<div class="share-button">
+  <span><i class="fas fa-share-alt"></i> Share!</span>
+  <a href="https://www.facebook.com/ismet.vejseli"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.facebook.com/ismet.vejseli"><i class="fab fa-twitter"></i></a>
+  <a href="https://www.facebook.com/ismet.vejseli"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.facebook.com/ismet.vejseli"><i class="fab fa-linkedin-in"></i></a>
+</div>
+</center>
 <div class="ft">
 <h2 style="  text-shadow: 5px 5px #FF0000;"> Powered by: WMW</h2>
 
@@ -206,7 +228,9 @@
 
 
 <script src="./app.js"></script>
-
+<script>
+  AOS.init(),0;
+</script>
 
         </body>
     </head>
