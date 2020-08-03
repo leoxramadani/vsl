@@ -219,8 +219,9 @@ p {
 	color: rgba(240, 248, 255, 0.021);
 	font-size: 13rem;
 	letter-spacing: 50px;
-	z-index: -1;
+	z-index: 1;
 	transition: .3s ease letter-spacing;
+	overflow: hidden;
 }
 #header .nav-list ul li:hover a::after {
 	transform: translate(-50%, -50%) scale(1);
@@ -411,24 +412,35 @@ opacity:1;
 
 .abt{
 	width: 80%;
-	height:800px;
-
+	height:950px;
 	box-shadow: 7px 10px 10px crimson;
 	margin-top:50px;
 	align-content: center;
 	justify-content: center;
 	margin-left:10%;
-	
+}
+.abt p{
+	text-align: center;
+	justify-content: center;
+	margin-top:-75%;
+	color:white;
+	opacity:1;
+}
+@media only screen and (min-width:700px) {
+	.abt p{
+		margin-top:-85%;
+	}
 }
 
+
 .extra img{
-	width:130px;
-	height:130px;
+	width:170px;
+	height:170px;
 	border-radius:100px;
 	position:absolute;
 	z-index:1;
 	margin-top:20px;
-	margin-left:36%;
+	margin-left:33%;
 }
 @media only screen and (max-width:600px) {
 	.extra img{
@@ -496,83 +508,6 @@ opacity:1;
 
 
 
-
-/* #region Share Button */
-.share-button{
-	width: 280px;
-	height: 80px;
-	background: #dfe6e9;
-	border-radius: 40px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	overflow: hidden;
-	position: relative;
-	cursor: pointer;
-	transition: .3s linear;
-	box-shadow: -7px -7px 10px crimson;
-	margin-top:150px;
-	margin-bottom:40px;
-  }
-  
-  .share-button:hover{
-	transform: scale(1.1);
-  }
-  
-  .share-button span{
-
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background: #2d3436;
-	color: #f1f1f1;
-	text-align: center;
-	line-height: 80px;
-	z-index: 999;
-	transition: .6s linear;
-	border-radius: 40px;
-  }
-  
-  .share-button:hover span{
-	transform: translateX(-100%);
-	transition-delay: .3s;
-  }
-  
-  .share-button a{
-	flex: 1;
-	font-size: 26px;
-	color: #2d3436;
-	text-align: center;
-	transform: translateX(-100%);
-	opacity: 0;
-	transition: 0.3s linear;
-  }
-  
-  
-  .share-button:hover a{
-	opacity: 1;
-	transform: translateX(0);
-  }
-  
-  .share-button a:nth-of-type(1){
-	transition-delay: 1s;
-  }
-  
-  .share-button a:nth-of-type(2){
-	transition-delay: 0.8s;
-  }
-  
-  .share-button a:nth-of-type(3){
-	transition-delay: 0.6s;
-  }
-  
-  .share-button a:nth-of-type(4){
-	transition-delay: 0.4s;
-  }
-  
-
-/* #endregion */
-
 /* #region Table */
 .table a,p{
 	color:white;
@@ -633,4 +568,122 @@ a{
   }
 }
 
+/* #endregion */
+
+
+/* #region Footer */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+footer{
+	position: relative;
+	bottom: 0px;
+	width: 100%;
+	background: #111;
+	color:white;
+  }
+  .main-content{
+	display: flex;
+  }
+  .main-content .box{
+	flex-basis: 50%;
+	padding: 10px 20px;
+  }
+  .box h2{
+	font-size: 1.125rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	color:white;
+  }
+  .box .content{
+	margin: 20px 0 0 0;
+	position: relative;
+  }
+  .box .content:before{
+	position: absolute;
+	content: '';
+	top: -10px;
+	height: 2px;
+	width: 100%;
+	background: #1a1a1a;
+  }
+  .box .content:after{
+	position: absolute;
+	content: '';
+	height: 2px;
+	width: 15%;
+	background: crimson;
+	top: -10px;
+  }
+  .left .content p{
+	text-align: justify;
+  }
+  .left .content .social{
+	margin: 20px 0 0 0;
+  }
+  .left .content .social a{
+	padding: 0 2px;
+  }
+  .left .content .social a span{
+	height: 40px;
+	width: 40px;
+	background: #1a1a1a;
+	line-height: 40px;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 5px;
+	transition: 0.3s;
+  }
+  .left .content .social a span:hover{
+	background: crimson;
+  }
+  .center .content .fas{
+	font-size: 1.4375rem;
+	background: #1a1a1a;
+	height: 45px;
+	width: 45px;
+	line-height: 45px;
+	text-align: center;
+	border-radius: 50%;
+	transition: 0.3s;
+	cursor: pointer;
+  }
+  .center .content .fas:hover{
+	background: crimson;
+  }
+  .center .content .text{
+	font-size: 1.0625rem;
+	font-weight: 500;
+	padding-left: 10px;
+  }
+  .center .content .phone{
+	margin: 15px 0;
+  }
+  .bottom center{
+	padding: 5px;
+	font-size: 0.9375rem;
+	background: #151515;
+  }
+  .bottom center span{
+	color: #656565;
+  }
+  .bottom center a{
+	color: #f12020;
+	text-decoration: none;
+  }
+  .bottom center a:hover{
+	text-decoration: underline;
+  }
+  @media screen and (max-width: 900px) {
+	footer{
+	  position: relative;
+	  bottom: 0px;
+	}
+	.main-content{
+	  flex-wrap: wrap;
+	  flex-direction: column;
+	}
+	.main-content .box{
+	  margin: 5px 0;
+	}
+  }
+  
 /* #endregion */
