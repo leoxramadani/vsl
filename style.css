@@ -430,7 +430,9 @@ opacity:1;
 
 /* #endregion */
 
-
+.name{
+		margin-top:65rem;
+	}
 
 /* #region Table */	
 
@@ -601,7 +603,6 @@ footer{
   .bottom center a{
 	color: #f12020;
 	text-decoration: none;
-	
   }
   .bottom center a:hover{
 	text-decoration: underline;
