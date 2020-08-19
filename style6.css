@@ -337,7 +337,7 @@ p {
 	margin-top:50px;
 	display: inline-block;
 	width:600px;
-	height:635px;
+	height:643px;
 	border:5px solid crimson;
 	background:transparent;
 	margin-left:30px;
@@ -523,7 +523,7 @@ footer{
   }
   @media screen and (max-width: 900px) {
 	.box h2{
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 }
   .box .content{
@@ -616,6 +616,10 @@ footer{
 	  flex-wrap: wrap;
 	  flex-direction: column;
 	}
+	.main-content p{
+		font-size:25px;
+		color:white;
+	}
 	.main-content .box{
 	  margin: 5px 0;
 	}
@@ -627,8 +631,9 @@ footer{
   .ndf button{
 	  color:rgb(255, 255, 255);
 	  font-weight:700;
-	width:120px;
-	height:30px;
+	width:250px;
+	height:80px;
+	font-size:2rem;
 	background:transparent;
 	border-radius:24px;
 	margin:30px;
