@@ -69,9 +69,9 @@ h1.section-title {
 			color: crimson;
 			font-size:5rem;
 		}
-
-		
 	}
+
+
 	#hero h1:nth-child(1) {
 		animation-delay: 1s;
 	}
@@ -407,7 +407,6 @@ opacity:1;
 
 
 
-
 /* #endregion */
 
 /* #region Clouuds */
@@ -431,8 +430,13 @@ opacity:1;
 /* #endregion */
 
 .name{
-		margin-top:65rem;
+		text-rendering: optimizeLegibility;
 	}
+	
+
+.name h1 span {
+	color: crimson;
+}
 
 /* #region Table */	
 
@@ -554,6 +558,7 @@ footer{
   .left .content .social{
 	margin: 20px 0 0 0;
   }
+  .left .content .social a:h
   .left .content .social a{
 	padding: 0 2px;
   }
@@ -644,3 +649,4 @@ footer{
   }
 
 /* #endregion */
+
