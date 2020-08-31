@@ -232,8 +232,8 @@ p {
 	color: crimson;
 }
 #header .hamburger {
-	height: 80px;
-	width: 80px;
+	height: 100px;
+	width: 100px;
 	display: inline-block;
 	border: 3px solid white;
 	border-radius: 50%;
