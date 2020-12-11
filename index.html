@@ -1,355 +1,827 @@
-
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Ismet Vejseli</title>
-        <link href="//db.onlinewebfonts.com/c/33bc06ea126d3ff79886277122f1f510?family=Brush+Script+MT" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="style6.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link href="//db.onlinewebfonts.com/c/33bc06ea126d3ff79886277122f1f510?family=Brush+Script+MT" rel="stylesheet" type="text/css"/>
+    <title>Vejseli</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:black;
+  scroll-behavior: smooth;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position:fixed;
+  width:100%;
+  z-index:9999;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: crimson;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: crimson;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: crimson;
+  color: black;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+.header1 img{
+width:100%;
+height:750px;
+padding: 5px auto;
+}
+@media screen and (max-width: 600px) {
+    .header1 img{
+        height:400px;
+        width:100%;
+}
+}
+.name{
+    margin-top:-26rem;
+    position:absolute;
+    z-index:10;
+  text-rendering: optimizeLegibility;
+
+	}
+	
+.name h1{
+    color:white;
+    font-size:2rem;
+    margin-left:2rem;
+    text-shadow: -12px 22px 8px #ffffff;
+    animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.name h1 span {
+    font-size:5rem;
+    color:crimson;
+    text-shadow: -12px 22px 8px crimson;
+    animation-name: example;
+  animation-duration: infinite;
+}
+
+@keyframes example {
+
+  100% {    text-shadow: -12px 22px 8px crimson;}
+}
+
+.name1{
+    margin-top:-2rem;
+    position: absolute;
+    z-index:10;
+    color:white;
+    font-size:2rem;
+    margin-left:80rem;
+    text-shadow: -12px 22px 5px white;
+}
+
+.name1 h1 span{
+    text-shadow: -12px 22px 12px crimson;
+    font-size:5rem;
+}
+
+@media screen and (max-width: 400px) {
+.name h1{
+    font-size:16px;
+    margin-top:180px;
+}
+.name1{
+margin-left:18rem;
+margin-top:2rem;
+}
+.name h1 span{
+    font-size:28px;
+}
+.name1 h1{
+    font-size:16px;
+    margin-top:110px;
+    margin-left:-5px;
+}
+.name h1 span{
+    font-size:28px;
+}
+}
+.links a{
+border:2px solid crimson;
+border-radius:30px;
+width:140px;
+height:40px;
+background:transparent;
+color:crimson;
+font-size:16px;
+margin-bottom:30px;
+text-align:Center;
+justify-content: center;
+align-self: center;
+margin-left:30px;
+display:inline-block;
+cursor:pointer;
+transition:.1s;
+font-style: none;
+padding-top:10px;
+}
+.links a:nth-child(1):hover{
+    box-shadow: -10px 10px 7px crimson;
+}
+.links a:nth-child(2):hover{
+    box-shadow: 0px 10px 7px crimson;
+}
+.links a:nth-child(3):hover{
+    box-shadow: 10px 10px 7px crimson;
+}
+@media screen and (max-width: 600px) {
+    .links a{
+        width:100px;
+        height:25px;
+        padding:5 auto;
+    }
+  }
+
+/*container*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+footer{
+	position: relative;
+	bottom: 0px;
+	width: 100%;
+	background-color:#111;
+	color:white;
+  }
+  .main-content{
+	display: absolute;
+  }
+  .main-content .box{
+	flex-basis: 50%;
+	padding: 10px 20px;
+  }
+  .box h2{
+	font-size: 3rem;
+	text-transform: uppercase;
+	color:white;
+  }
+  @media screen and (max-width: 900px) {
+	.box h2{
+		font-size: 2rem;
+	}
+}
+  .box .content{
+	margin: 20px 0 0 0;
+	position: relative;
+  }
+  .box .content:before{
+	position: absolute;
+	content: '';
+	top: -10px;
+	height: 5px;
+	width: 100%;
+	background: #1a1a1a;
+  }
+  .box .content:after{
+	position: absolute;
+	content: '';
+	height: 5px;
+	width: 19%;
+	background: crimson;
+	top: -10px;
+  }
+  .left .content p{
+	text-align: justify;
+	font-size:1rem;
+	font-weight:60;
+  }
+  .left .content .social{
+	margin: 20px 0 0 0;
+  }
+  .left .content .social a:h
+  .left .content .social a{
+	padding: 0 2px;
+  }
+  .left .content .social a span{
+	height: 40px;
+	width: 40px;
+	background: #1a1a1a;
+	line-height: 40px;
+	text-align: center;
+	font-size: 30px;
+	border-radius: 5px;
+	transition: 0.3s;
+  }
+  .left .content .social a span:hover{
+	background: crimson;
+  }
+  .center .content .fas{
+	font-size: 1.4375rem;
+	background: #1a1a1a;
+	height: 45px;
+	width: 45px;
+	line-height: 45px;
+	text-align: center;
+	border-radius: 50%;
+	transition: 0.3s;
+	cursor: pointer;
+  }
+  .center .content .fas:hover{
+	background: crimson;
+  }
+  .center .content .text{
+	font-size: 1.0625rem;
+	font-weight: 500;
+	padding-left: 10px;
+  }
+  .center .content .phone{
+	margin: 15px 0;
+  }
+  .bottom center{
+	padding: 5px;
+	font-size: 0.9375rem;
+	background: #151515;
+  }
+  .bottom center span{
+	color: #656565;
+  }
+  .bottom center a{
+	color: #f12020;
+	text-decoration: none;
+  }
+  .bottom center a:hover{
+	text-decoration: underline;
+  }
+  @media screen and (max-width: 900px) {
+	footer{
+	  position: relative;
+	  bottom: 0px;
+	}
+	.main-content{
+	  flex-wrap: wrap;
+	  flex-direction: column;
+	}
+	.main-content p{
+		font-size:19px;
+		color:white;
+	}
+	.main-content .box{
+	  margin: 5px 0;
+	}
+  }
+  .pmain {
+    color:rgb(136, 132, 132);
+    font-size:15px;
+  }
+  .mainh1{
+    		font-size: 15px;
+             text-transform: uppercase;
+             color:white;
+             margin-top: 30px;
+             margin-bottom:0;
+             background:crimson;
+             width:200px;
+             position:sticky;
+             font-style:oblique;
+  }
+  .content b{
+    font-size:19px;
+    color:rgb(243, 243, 243);
+  }
+  .content i{
+    color:rgb(243, 243, 243);
+  }
+  @media screen and (max-width: 400px) {
+    .pmain p{
+        font-size:7px;
+    }
+    .mainh1{
+        font-size:7px;
+    }
+    .content b{
+        font-size:19px;
+        color:crimson;
+    }
+    .content i{
+        font-size:14px;
+    }
+    .left .content p{
+	text-align: justify;
+	font-size:14px;
+	font-weight:60;
+  }
+}
+table{
+    width:90%;
+    text-align:center;
+    margin-left:5%;
+    margin-bottom: 30px;
+    margin-top:30px;
+}
+table, th, td {
+    border:1px solid white; 
+  border-collapse: collapse;
+  color:white
+
+}
+table th{
+    background:crimson;
+    color:white;
+    border:1px solid crimson;
+}
+table td,th{
+  height:40px;
+}
+
+.serv{
+  margin-top:50px;
+  display:inline-block;
+  width:440px;
+  height:483px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border:5px solid crimson;
+  background:transparent;
+  margin-left:0px;
+  margin-right:30px;
+  margin-bottom:30px;
+  transition: .3s;
+  padding:10px;
+  z-index:10;
+}
+.serv img{
+  width:430px;
+  height:430px;
+  margin-top:20px;
+  margin-left:20px;
+  box-shadow:-12px -12px 17px crimson;
+  z-index:1;
+}
+
+.serv p{
+	text-align: center;
+	margin-top:-15px;
+	color:crimson;
+	font-size:16px;
+	opacity:0;
+  transition: .3s;
+}
+.serv:hover{
+	height:510px;
+}	
+.serv:hover p{
+opacity:1;
+}
+.serv h1{
+	color:crimson;
+	font-family:'Times New Roman', Times, serif;
+	text-align: center;
+  font-size:25px;
+  margin-top:-8px;
+}
+@media only screen and (max-width: 500px) {
+	.serv {
+		float:none;
+    width:300px;
+    height:320px;
+    margin-left:20px; 
+  }
+  .serv:hover{
+    height:356px;
+  }
+  .serv h1{
+    font-size:20px;
+  }
+	.serv img{
+    width:290px;
+    height:290px;
+	}
+	
+}
+.vdd{
+	border:7px solid rgb(47, 113, 255);
+	border-top-left-radius: 50px;
+	width:400px;
+	height:200px;
+	display:inline-block;
+	margin-top:100px;
+	margin-left:10px;
+	margin-right:150px;
+	padding:10px;
+}
+
+.vdd video{
+	width:450px;
+	display:inline-block;
+	margin-left:20px;
+	margin-top:25px;
+	box-shadow: -7px -10px 10px rgb(47, 113, 255);;
+}
+
+@media only screen and (max-width: 500px) {
+.vdd{
+width:290px;
+height:150px;
+}
+	.vdd video{
+width:305px;
+  }
+}
+
+.info{
+  margin-top:100px;
+  width:100%;
+  height:100px;
+  background:transparent;
+  text-align: center;
+  border-top-width: 5px;
+  border-top-style: solid;
+  border-top-color:crimson;
+  margin-bottom:50px;
+}
+.info h3{
+  margin-top:0;
+  text-align: center;
+  color:white;
+  background:Crimson;
+  
+}
+.info i{
+  margin-top:20px;
+  color:white;
+  background:crimson;
+  font-size:18px;
+  float:left;
+  display:table-column
+}
+.booking{
+  margin-top:20px;
+width:330px;
+height:375px;
+background:transparent;
+border:7px solid crimson;
+border-top-left-radius: 25px;
+border-top-right-radius:25px;
+}
+.booking label{
+  color:white;
+  text-align:center;
+}
+.booking input{
+  text-align:center;
+  border:0;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="topnav" id="myTopnav">
+        <a href="#Achievments" >Achievments</a>
+        <a href="#concerts">Concerts</a>
+        <a href="#Media">Media</a>
+        <a href="#Booking">Booking</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars" ></i>
+        </a>
+      </div>
+      
+      <div class="header1">
+          <img src="iv11.jpg" >
+      </div>
+
+      <div class="name">
+        <h1 >
+          <span ><i>I</i></span>smet
+          <span ><i>V</i></span>ejseli</h1>
+      </div>
+      <br><br>
+      <div class="name">
+          <div class="name1">
+      <i><h1><span>T</span>enor</h1></i>
+    </div>  
+    </div>
+
+    <center>
+    <div class="links">
+    <a href="">Shqip</a>
+    <a href="">Македонски</a>
+    <a href="">English</a>
+    </div>
+    </center>
+
+
+    <section id="Achievments">
+
+        <footer>
+          <div class="main-content">
+            <div class="left box">
+              <img src="iv10.jpg" style="width:150px;height:150px;border-radius:50%;position:absolute;z-index:1;border: 5px solid crimson;">
+              <h2  style="margin-top:170px;background:crimson;width:100px;font-size:25px;">About </h2>
+        <div class="content">
+          <p  class="pmain"><b>Vejseli</b> - born on 11.04.1998 in Kumanovo.
+            After graduating from middle school for Music and Arts, field of Clarinet and solo singing, Ismet decides to go to Skopje
+            at <i>"Ilija Nikolovski"</i>-High School, where he graduates on solo singing.
+            There he had the honor to work with <i>Prof.Mustafa Imeri</i>- Professor of Solo Singing.
+            In High School Ismet Vejseli had the opportunity to participate in many state competitions and even international ones.
+            After one full year of hard working with <i > Prof.Mustafa Imeri</i>, Vejseli was the <i>first place special winner</i> of a state competition for Solo Singing, in <i>North Macedonia</i>.
+            In the next three years, Vejseli was the winner of the <i>first place </i>of the same competition.
+      
+            </p>
+             <h2  class="mainh1" style="font-size:25px;">Achievements</h2>
+             <p class="pmain">
+              <b >In 2016 </b>Vejseli participated in the <i>International Music Festival of Arangjelovac, Serbia,</i> and he was 
+              the winner of the <b><i>first place.</i></b>
+              In the same year, Vejseli was chosen by <i>"Ilija Nikolovski- Luj"</i> to be part of the masterclass in <i>Prizren, Kosovo</i>, where he worked
+              with the well-known soprano from <i>Spain, Prof. Dolores Delgado</i>.
+              <b> <br>After ten days</b> in <i>Prizren</i>, Vejseli won the opportunity to travel to <i>Forli, Italy</i>, where he had the chance
+              to perform in many concerts and to keep on working with <i>Mr.Delgado even in Italy</i>.
+              Vejseli was even part of <i>European Summer Acadamy - ESMA - in Prishtina, Kosovo</i>, where
+              he had the honor to work with soprano <i>Eriona Gjyzeli - Dragoicea</i>.
+              He had many other concerts in <i> Prishtina, Prizren, Skopje, Kumanovo etc.</i>
+              <br><br>
+              <b>In 2017</b> he continues on studying music in <i>"St. Cyril and Methodius"-Skopje, field - Solo Singing,</i> in the group
+              of the worldwide famous soprano <i>Doc.Ana Durlovski.</i>
+              <br><br>
+              <b>In 2018</b> Vejseli performs his first recital in <i>Kumanovo, North Macedonia.</i>
+              He even performs in a festival of modern classical music in <i>Tirana, Albania.</i>
+              He had concerts in <i>Kercovo, Tetovo</i> and many other cities with <i>Youth Orchestra of Tetovo</i> with 
+              conductor <i>Mrs.Agona Cupi.</i>
+              <br><br>
+              <b>In 2019 </b>Vejseli is part of the masterclass in<i> Berlin, Germany </i>where he works with vocal pedagogue of the <i >Berlin Opera(Berlin Staatsoper), Mrs.Snezana Nena Brzakovic.</i>
+              <br>In March of the same year, Vejseli gets invited by the Music Academy as a solist for the 
+              <i>70th anniversary of "St. Cyril and Methodius" University,</i> where he performs with dhe orchestra and the choir of the academy,
+              under the direction of mastro <i >Sasho Tatarchevski.</i><br>
+              <b ><br>In November of this year</b> Vejseli competes in <i  >,,Romansiadat ballkanike’’ festival in Sofia, Bulgaria,</i> where he wins <i>the second place</i> and the opportunity to sing <i>in Russia.</i>
+              After the competition, Vejseli performs in his own solo recital in Skopje, and it was a very
+              successful and important recital for his growth as an artist.
+              <br><br>
+              <b>On 8th of December </b>of the same year, Vejseli performs in <i >Moscow, Russia,"</i> in one of biggest
+              international competitions, where he wins <i>the 4th place </i>and again another great opportunity to sing in <b >February 2020 in Kremlin, Moscow</b> in one of the biggest hall of the world.
+              <br><br>
+              <b>On 19th of December 2020</b>, Vejseli together with the pianist <i>Kolos Curri,</i> performs in Skopje with a well prepared material special for the audience of Skopje, and of course it ended as an very successful concert.
+              <br><Br>
+              <b>On 23th of December 2020</b>, Vejseli debuts in the <i>National Opera and Ballet of Skopje, </i>with the role of the soldier in the opera of <i>Fatos Lumani, called "Scanderbeg". </i>
+              It is worth to mention that this was a worlwide premiere and qualifies as a historical premiere because it is seen as the first <i>Albanian Opera in North Macedonia.</i>
+              <br><br>
+              <b>On 1st of February 2020</b>, he performs in the <i>Royal Hall of Kremlin, </i>in front of an audience of around 6 thousand people, where he sings <i>russian romances</i> under the direction of the traditional orchestra of Moscow.
+      
+            </p>
         
-        <body>
-
-              <!-- Header -->
-  <section id="header">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="#hero"><h1><span>I</span>smet <span>V</span>ejseli</h1></a>
         </div>
-
-        <div class="nav-list">
-          <div class="hamburger"><div class="bar"></div></div>
-          <ul>
-            <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#About" data-after="About">About</a></li>
-            <li><a href="#Concerts" data-after="Concerts">Concerts</a></li>
-            <li><a href="#Media" data-after="Media">Media</a></li>
-            <li><a href="#Videos" data-after="Videos">Videos</a></li>
-            <li><a href="#Contact" data-after="Contact">Contact</a></li>
-          </ul>
         </div>
-      </div>
-    </div>
-  </section>
+        </footer>
+        
+        
+        </section>
 
-  <section id="home">
-  <section id="hero">
 
-    <div class="banner">
-      <div class="clouds">
- 
-      </div>
-  </div>
-    <div class="hero container">
+<section id="concerts">
 
-    </div>
-  </section>
+  <h1 style="text-align:center;background:crimson;color:white;margin-top:100px;">Concerts</h1>
+
+<table>
+    <tr>
+      <th>Date</th>
+      <th>Location</th> 
+      <th>Hall</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+        <td>~/~/2020</td>
+        <td>Russia</td>
+        <td>/</td>
+        <td>Confirmed</td>
+      </tr>
+    <tr>
+        <td>~/~/2020</td>
+      <td>Italy</td>
+      <td>/</td>
+      <td>Wating...</td>
+    </tr>
+    <tr>
+        <td>~/~/2020</td>
+      <td>France</td>
+      <td>/</td>
+      <td>Canceled</td>
+    </tr>
+  </table>
 </section>
-
-
-
-<div class="name" style="margin-top:-21rem;position:absolute;z-index:10">
-  <h1 style="color:white;font-size:5rem; margin-left:2rem; text-shadow: -12px 42px 12px #ffffff;">
-    <span style="font-size:8rem;text-shadow: -12px 42px 12px crimson;">I</span>smet
-    <span style="font-size:8rem;text-shadow: -12px 42px 12px crimson;">V</span>ejseli</h1>
-</div>
-<br><br>
-<div class="name">
-<i><h1 style="margin-top:-17rem;position: absolute;z-index:10;color:white;font-size:8rem;font-weight:600;margin-left:2rem;text-shadow: -12px 42px 12px white;"><span style="text-shadow: -12px 42px 12px crimson;">T</span>enor</h1></i>
-</div>
-<center>
-  <div class="ndf" >
-<button onclick="window.location.href='indexShqip.html';" >Shqip</button>
-<button>Македонски</button>
-<button style="border:1px solid black;	box-shadow: 7px 7px 10px rgb(56, 238, 56);"onclick="window.location.href='index.html';">English</button>
-</div>
-</center>
-
-
-<section id="About">
-
-  <footer>
-    <div class="main-content">
-      <div class="left box">
-        <img src="iv10.jpg" style="width:250px;height:250px;border-radius:50%;position:absolute;z-index:1;border: 5px solid crimson;">
-        <h2 style="margin-top:265px;background:crimson;width:180px;">About </h2>
-  <div class="content">
-    <p style="color:rgb(173, 168, 168);font-size:20px;"><b style="font-size:28px;color:white;">Ismet Vejseli</b> - born on 11.04.1998 in Kumanovo.
-      After graduating from middle school for Music and Arts, field of Clarinet and solo singing, Ismet decides to go to Skopje
-      at <i  style="color:white;">"Ilija Nikolovski"</i>-High School, where he graduates on solo singing.
-      There he had the honor to work with <i  style="color:white;">Prof.Mustafa Imeri</i>- Professor of Solo Singing.
-      In High School Ismet Vejseli had the opportunity to participate in many state competitions and even international ones.
-      After one full year of hard working with <i  style="color:white;"> Prof.Mustafa Imeri</i>, Vejseli was the <i  style="color:white;">first place special winner</i> of a state competition for Solo Singing, in <i  style="color:white;">North Macedonia</i>.
-      In the next three years, Vejseli was the winner of the <i  style="color:white;">first place </i>of the same competition.
-
-      </p>
-       <h2 style="		font-size: 3rem;
-       font-weight: 600;
-       text-transform: uppercase;
-       color:white;
-       margin-top: 30px;
-       margin-bottom:0;
-       background:crimson;
-       width:410px;">Achievements</h2>
-       <p style="margin-top:0;color:rgb(196, 193, 193);font-size:20px;">
-        <b  style="font-size:25px;color:white;">In 2016 </b>Vejseli participated in the <i  style="color:white;">International Music Festival of Arangjelovac, Serbia,</i> and he was 
-        the winner of the <b  style="color:white;"><i>first place.</i></b>
-        In the same year, Vejseli was chosen by <i  style="color:white;">"Ilija Nikolovski- Luj"</i> to be part of the masterclass in <i  style="color:white;">Prizren, Kosovo</i>, where he worked
-        with the well-known soprano from <i  style="color:white;">Spain, Prof. Dolores Delgado</i>.
-        <b> <br>After ten days</b> in <i  style="color:white;">Prizren</i>, Vejseli won the opportunity to travel to <i  style="color:white;">Forli, Italy</i>, where he had the chance
-        to perform in many concerts and to keep on working with <i  style="color:white;">Mr.Delgado even in Italy</i>.
-        Vejseli was even part of <i  style="color:white;">European Summer Acadamy - ESMA - in Prishtina, Kosovo</i>, where
-        he had the honor to work with soprano <i  style="color:white;">Eriona Gjyzeli - Dragoicea</i>.
-        He had many other concerts in <i  style="color:white;"> Prishtina, Prizren, Skopje, Kumanovo etc.</i>
-        <br><br>
-        <b  style="font-size:25px;color:white;">In 2017</b> he continues on studying music in <i  style="color:white;">"St. Cyril and Methodius"-Skopje, field - Solo Singing,</i> in the group
-        of the worldwide famous soprano <i  style="color:white;">Doc.Ana Durlovski.</i>
-        <br><br>
-        <b  style="font-size:25px;color:white;">In 2018</b> Vejseli performs his first recital in <i  style="color:white;">Kumanovo, North Macedonia.</i>
-        He even performs in a festival of modern classical music in <i  style="color:white;">Tirana, Albania.</i>
-        He had concerts in <i  style="color:white;">Kercovo, Tetovo</i> and many other cities with <i  style="color:white;">Youth Orchestra of Tetovo</i> with 
-        conductor <i  style="color:white;">Mrs.Agona Cupi.</i>
-        <br><br>
-        <b  style="font-size:25px;color:white;">In 2019 </b>Vejseli is part of the masterclass in<i  style="color:white;"> Berlin, Germany </i>where he works with vocal pedagogue of the <i  style="color:white;">Berlin Opera(Berlin Staatsoper), Mrs.Snezana Nena Brzakovic.</i>
-        <br>In March of the same year, Vejseli gets invited by the Music Academy as a solist for the 
-        <i  style="color:white;">70th anniversary of "St. Cyril and Methodius" University,</i> where he performs with dhe orchestra and the choir of the academy,
-        under the direction of mastro <i  style="color:white;">Sasho Tatarchevski.</i><br>
-        <b  style="font-size:25px;color:white;"><br>In November of this year</b> Vejseli competes in <i  style="color:white;">,,Romansiadat ballkanike’’ festival in Sofia, Bulgaria,</i> where he wins <i style="color:white;">the second place</i> and the opportunity to sing <i  style="color:white;">in Russia.</i>
-        After the competition, Vejseli performs in his own solo recital in Skopje, and it was a very
-        successful and important recital for his growth as an artist.
-        <br><br>
-        <b  style="font-size:25px;color:white;">On 8th of December </b>of the same year, Vejseli performs in <i style="color:white;">Moscow, Russia,"</i> in one of biggest
-        international competitions, where he wins <i style="color:white;">the 4th place </i>and again another great opportunity to sing in <b style="color:white;">February 2020 in Kremlin, Moscow</b> in one of the biggest hall of the world.
-        <br><br>
-        <b  style="font-size:25px;color:white;">On 19th of December 2020</b>, Vejseli together with the pianist <i style="color:white;">Kolos Curri,</i> performs in Skopje with a well prepared material special for the audience of Skopje, and of course it ended as an very successful concert.
-        <br>
-        <b style="font-size:25px;color:white;">On 23th of December 2020</b>, Vejseli debuts in the <i style="color:white;">National Opera and Ballet of Skopje, </i>with the role of the soldier in the opera of <i style="color:white;">Fatos Lumani, called "Scanderbeg". </i>
-        It is worth to mention that this was a worlwide premiere and qualifies as a historical premiere because it is seen as the first <i style="color:white;">Albanian Opera in North Macedonia.</i>
-        <br>
-        <b style="font-size:25px;color:white;">On 1st of February 2020</b>, he performs in the <i style="color:white;">Royal Hall of Kremlin, </i>in front of an audience of around 6 thousand people, where he sings <i style="color:white;">russian romances</i> under the direction of the traditional orchestra of Moscow.
-
-      </p>
-  
-  </div>
-  </div>
-  </footer>
-  
-  
-  </section>
-  
-
-<section id="Concerts">
-  
-  <h1 style="color:white;text-align:center;font-size:35px;margin-top:150px;text-shadow: 5px 5px #FF0000;">Concerts</h1>
-
-  <div class="table-box">
-    <div class="table-row table-head">
-        <div class="table-cell first-cell">
-            <p>Date</p>
-        </div>
-        <div class="table-cell">
-            <p>Location</p>
-        </div>
-        <div class="table-cell">
-          <p>Hall</p>
-      </div>
-        <div class="table-cell last-cell">
-            <p>Status</p>
-        </div> 
-    </div>
-
-
-    <div class="table-row">
-        <div class="table-cell first-cell">
-            <p>-/-/2020</p>
-        </div>
-        <div class="table-cell">
-            <p>Russia</p>
-        </div>
-        <div class="table-cell">
-            <a >/</a>
-        </div>   
-        <div class="table-cell last-cell">
-          <a >On</a>
-      </div>   
-    </div>
-
-
-    <div class="table-row">
-        <div class="table-cell first-cell">
-            <p>-/-/2020</p>
-        </div>
-        <div class="table-cell">
-            <p>Italy</p>
-        </div>
-        <div class="table-cell">
-            <a >/</a>
-        </div>
-        <div class="table-cell last-cell">
-          <a >Unknown!</a>
-      </div>   
-    </div>
-
-    <div class="table-row">
-        <div class="table-cell first-cell">
-            <p>-/-/2020</p>
-        </div>
-        <div class="table-cell">
-            <p>France</p>
-        </div>
-        <div class="table-cell">
-            <a>/</a>
-        </div>
-        <div class="table-cell last-cell">
-          <a >Waiting...</a>
-      </div>   
-    </div>
-</div>   
-
-
-</section>
-
-
 
 
 <section id="Media">
-  
-<h1 style="color:white;text-align:center;font-size:35px;margin-top:150px;text-shadow: 5px 5px #FF0000;">Media</h1>
- 
+  <h1 style="text-align:center;background:crimson;color:white;margin-top:100px;">Media</h1>
 
-
-<div class="serv"  style="float:left;"><img src="iv1.jpg" >
+<div class="serv">
+  <img src="iv1.jpg">
   <h1>Skopje, Macedonia </h1>
   <p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
   <p>July 15, 2020</p>
 </div>
 
-<div class="serv" style="float:right;margin-right:30px;"><img src="iv2.jpg" >
-<h1>Moscow, Russia</h1>
-<p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
-<p>December 9, 2019</p>
-</div>
 
-<div class="serv"  style="float:left;"><img src="iv3.jpg">
-  <h1>Sofia, Bulgaria</h1>
+<div class="serv" style="float:right;"><img src="iv2.jpg" >
+  <h1>Moscow, Russia</h1>
   <p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
-  <p>November 11, 2019</p>
-</div>
-
-<div class="serv" style="float:right;margin-right:30px;"><img src="iv4.jpg" >
-  <h1>Tirana, Albania</h1>
-  <p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
-  <p>November 9, 2018</p>
-</div>
-
-<div class="serv" style="float:left;"><img src="iv5.jpg" >
-  <h1 >Elbasan, Albania</h1>
-  <p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
-  <p>October 25, 2018 </p>
-</div>
-
-<div class="serv"style="float:right;margin-right:30px;"><img src="iv6.jpg" >
-  <h1>Forli, Italy</h1>
-  <p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
-  <p>September 9, 2016</p>
-</div>
-
-</section>
-
-
-
-<section id="Videos">
-
-
-<div class="vdd">
-  <video   controls>
-    <source src="v1.mp4" type="video/mp4">
-    Your browser does not support HTML video.
-  </video>
-</div>
-
-<div class="vdd" style="float:right">
-  <video   controls>
-    <source src="v2.mp4" type="video/mp4">
-    Your browser does not support HTML video.
-  </video>
-</div>
-
-<div class="vdd" >
-  <video   controls>
-    <source src="v3.mp4" type="video/mp4">
-    Your browser does not support HTML video.
-  </video>
-</div>
-
-<div class="vdd"style="float:right"> 
-   <video width="300" height="250" controls>
-  <source src="v4.mp4" type="video/mp4">
-  Your browser does not support HTML video.
-</video>
-</div>
-
-<div class="vdd" style="margin-top:50px;">
-  <video width="300"  controls>
-    <source src="v5.mp4" type="video/mp4">
-    Your browser does not support HTML video.
-  </video>
-</div>
-
-
-<div class="vdd"style="float:right">
-  <video width="300" height="250"  controls>
-    <source src="v6.mp4" type="video/mp4">
-    Your browser does not support HTML video.
-  </video>
-</div>
-
-
-</section>
-
-<section id="Contact">
-
-<h1 style="color:white;text-align:center;font-size:35px;margin-top:70%;margin-bottom:50px;text-shadow: 5px 5px #000000;">About/Contact</h1>
-<footer>
+  <p>December 9, 2019</p>
+  </div>
   
-  <div class="center box">
-    <h2 style="background:crimson;width:320px;font-size:4rem;"> Address</h2>
-<div class="content">
-  <br>
-      <div class="place">
-        <span class="fas fa-map-marker-alt" style="font-size:3rem;"></span>
-        <span class="text" style="font-size:2.5rem;margin-left:1rem;">Kumanovo, North Macedonia</span>
-      </div>
-<div class="phone">
-        <span class="fas fa-phone-alt" style="font-size:3rem;"></span>
-        <span class="text"style="font-size:2.5rem;margin-left:1rem;">+389 70 741 775</span>
-      </div>
-<div class="email">
-        <span class="fas fa-envelope" style="font-size:3rem;"></span>
-        <span class="email" style="font-size:2.5rem;margin-left:1.7rem;">  ismetv99@gmail.com</span>
-      </div>
-</div>
-</div>
+  <div class="serv"  style="float:left;"><img src="iv3.jpg">
+    <h1>Sofia, Bulgaria</h1>
+    <p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
+    <p>November 11, 2019</p>
+  </div>
+  
+  <div class="serv" style="float:right;"><img src="iv4.jpg" >
+    <h1>Tirana, Albania</h1>
+    <p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
+    <p>November 9, 2018</p>
+  </div>
+  
+  <div class="serv" style="float:left;"><img src="iv5.jpg" >
+    <h1 >Elbasan, Albania</h1>
+    <p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
+    <p>October 25, 2018 </p>
+  </div>
+  
+  <div class="serv"style="float:right;"><img src="iv6.jpg" >
+    <h1>Forli, Italy</h1>
+    <p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
+    <p>September 9, 2016</p>
+  </div>
+
 <center>
-  <div class="social" style="margin-top:50px;margin-bottom:-40px;">
-            <a href="https://www.facebook.com/ismet.vejseli" style="margin-right:30px"><span class="fab fa-facebook-f" style="font-size:2.5rem;margin:4rem;"></span></a>
-            <a href="https://instagram.com/ismetvsl"><span class="fab fa-instagram" style="font-size:2.5rem;margin:4rem;"></span></a>
-          </div>
-        </center>
-</div>
-<center style="margin-top:100px;">
-<span class="credit" style="font-size:20px;">Created by <a href="https://www.facebook.com/LeotrimRa/" style="color:crimson;font-size:20px;">Leotrim Ramadani</a> <br> </span>
-<span class="far fa-copyright" style="font-size:20px;"></span> 2020 All rights reserved.
+  <div class="vdd">
+    <video   controls>
+      <source src="v1.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+  </div>
+  
+  <div class="vdd">
+    <video   controls>
+      <source src="v2.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+  </div>
+  
+  <div class="vdd" >
+    <video   controls>
+      <source src="v3.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+  </div>
+  
+  <div class="vdd"> 
+     <video width="300" height="250" controls>
+    <source src="v4.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+  </div>
+  
+  <div class="vdd">
+    <video width="300"  controls>
+      <source src="v5.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+  </div>
+  
+  
+  <div class="vdd" >
+    <video width="300" height="250"  controls>
+      <source src="v6.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+  </div>  
+
+  <div class="vdd" >
+    <video width="300" height="250"  controls>
+      <source src="iv22.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+  </div>  
+
+  <div class="vdd" >
+    <video width="300" height="250"  controls>
+      <source src="iv23.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+  </div>  
 </center>
-<div style="height:40px;"></div>
-</footer>
 
 </section>
 
+<section id="Booking">
+  <center>
+    <h2 style="text-align:center;color:White;background:crimson;  margin-top:100px;">Bookings</h2>
 
-<script src="./app.js"></script>
+<div class="booking">
+  <form action="mailto:ismetv99@gmail.com" method="post" enctype="text/plain">
+<label>Name: </label><br>
+<input type="text" name="name"><br><br>
+<label>City: </label><br>
+<input type="text" name="name"><br><br>
+<label>Adress: </label><br>
+<input type="text" name="name"><br><br>
+<label>Hall: </label><br>
+<input type="text" name="name"><br><br>
+<label>Message: </label><br>
+<textarea rows="5" name="extra">
+</textarea><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
+</div>
+</center>
 
-        </body>
-    </head>
+
+</section>
+
+<section id="info">
+  
+<div class="info">
+<h3>Info</h3>
+
+<center>
+  <div class="place" style="display:inline-block;margin-left:30px;">
+    <span class="fas fa-map-marker-alt" style="font-size:18px;color:crimson"></span>
+    <span class="text" style="font-size:15px;color:white">Kumanovo, North Macedonia</span>
+  </div>
+</center>
+
+<center>
+<div class="phone" style="display:inline-block;margin-left:30px;">
+        <span class="fas fa-phone-alt" style="font-size:18px;color:crimson"></span>
+        <span class="text"style="font-size:15px;color:white">+389 70 741 775</span>
+      </div>
+    </center>
+    
+  <center>
+<div class="email" style="display:inline-block;margin-left:30px;">
+        <span class="fas fa-envelope" style="font-size:18px;color:crimson"></span>
+        <span class="email" style="font-size:15px;color:white">  ismetv99@gmail.com</span>
+</div>
+    </center>
+    
+<center>
+<div class="facebook" style="display:inline-block;margin-left:30px;margin-top:">
+  <span class="fa fa-facebook" style="font-size:18px;color:crimson"></span>
+  <span class="email" style="font-size:15px;color:white"><a href="facebook/ismet.vejseli" style="color:white;">Facebook</a></span>
+</div>
+</center>
+
+
+</section>
+
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+</body>
 </html>
