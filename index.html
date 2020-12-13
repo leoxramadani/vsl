@@ -8,20 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
     <style>
 body {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background:black;
-  scroll-behavior: smooth;
 }
 
 .topnav {
   overflow: hidden;
   background-color: #333;
   position:fixed;
+  margin-top:-10px;
   width:100%;
   z-index:9999;
 }
@@ -32,6 +33,7 @@ body {
   color: crimson;
   text-align: center;
   padding: 14px 16px;
+  margin-top:0px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -652,101 +654,139 @@ border-top-right-radius:25px;
 <section id="Media">
   <h1 style="text-align:center;background:crimson;color:white;margin-top:100px;">Media</h1>
 
+  <div data-aos="fade-right" style="display:inline-block;">
 <div class="serv">
   <img src="iv1.jpg">
   <h1>Skopje, Macedonia </h1>
   <p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
   <p>July 15, 2020</p>
 </div>
+</div>
 
 
+<div data-aos="fade-left" style="display:inline-block;">
 <div class="serv" style="float:right;"><img src="iv2.jpg" >
   <h1>Moscow, Russia</h1>
   <p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
   <p>December 9, 2019</p>
   </div>
+</div>
+
   
+  <div data-aos="fade-right" style="display:inline-block;">
   <div class="serv"  style="float:left;"><img src="iv3.jpg">
     <h1>Sofia, Bulgaria</h1>
     <p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
     <p>November 11, 2019</p>
   </div>
-  
+</div>
+
+
+  <div data-aos="fade-left" style="display:inline-block;">
   <div class="serv" style="float:right;"><img src="iv4.jpg" >
     <h1>Tirana, Albania</h1>
     <p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
     <p>November 9, 2018</p>
   </div>
-  
+</div>
+
+
+  <div data-aos="fade-right" style="display:inline-block;">
   <div class="serv" style="float:left;"><img src="iv5.jpg" >
     <h1 >Elbasan, Albania</h1>
     <p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
     <p>October 25, 2018 </p>
   </div>
-  
+</div>
+
+
+  <div data-aos="fade-left" style="display:inline-block;">
   <div class="serv"style="float:right;"><img src="iv6.jpg" >
     <h1>Forli, Italy</h1>
     <p style="text-align: center;"><a href="https://www.facebook.com/ismet.vejseli/videos/3115477358482743" style="color:white;letter-spacing: 0rem;">Link</a></p>
     <p>September 9, 2016</p>
   </div>
+</div>
 
 <center>
+
+    <div data-aos="flip-up">
   <div class="vdd">
     <video   controls>
       <source src="v1.mp4" type="video/mp4">
       Your browser does not support HTML video.
     </video>
   </div>
+</div>
+
   
+  <div data-aos="flip-down">
   <div class="vdd">
     <video   controls>
       <source src="v2.mp4" type="video/mp4">
       Your browser does not support HTML video.
     </video>
   </div>
+</div>
   
+  <div data-aos="flip-up">
   <div class="vdd" >
     <video   controls>
       <source src="v3.mp4" type="video/mp4">
       Your browser does not support HTML video.
     </video>
   </div>
-  
+</div>
+
+
+  <div data-aos="flip-down">
   <div class="vdd"> 
      <video width="300" height="250" controls>
     <source src="v4.mp4" type="video/mp4">
     Your browser does not support HTML video.
   </video>
   </div>
-  
+</div>
+
+
+  <div data-aos="flip-up">
   <div class="vdd">
     <video width="300"  controls>
       <source src="v5.mp4" type="video/mp4">
       Your browser does not support HTML video.
     </video>
   </div>
+</div>
+
   
-  
+  <div data-aos="flip-down">
   <div class="vdd" >
     <video width="300" height="250"  controls>
       <source src="v6.mp4" type="video/mp4">
       Your browser does not support HTML video.
     </video>
   </div>  
+</div>
 
+
+  <div data-aos="flip-up">
   <div class="vdd" >
     <video width="300" height="250"  controls>
       <source src="iv22.mp4" type="video/mp4">
       Your browser does not support HTML video.
     </video>
   </div>  
+</div>
 
+
+  <div data-aos="flip-down">
   <div class="vdd" >
     <video width="300" height="250"  controls>
       <source src="iv23.mp4" type="video/mp4">
       Your browser does not support HTML video.
     </video>
   </div>  
+</div>
 </center>
 
 </section>
@@ -804,7 +844,7 @@ border-top-right-radius:25px;
     </center>
     
 <center>
-<div class="facebook" style="display:inline-block;margin-left:30px;margin-top:">
+<div class="facebook" style="display:inline-block;margin-left:30px;">
   <span class="fa fa-facebook" style="font-size:18px;color:crimson"></span>
   <span class="email" style="font-size:15px;color:white"><a href="facebook/ismet.vejseli" style="color:white;">Facebook</a></span>
 </div>
@@ -823,5 +863,10 @@ border-top-right-radius:25px;
           }
         }
         </script>
+        <script>
+            AOS.init({
+                duration:1800,
+            });
+          </script>
 </body>
 </html>
