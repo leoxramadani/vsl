@@ -328,7 +328,7 @@ table td,th{
   border-top-right-radius:25px;
   }
   .booking button{
-    border:1px solid white;
+    border:1px solid crimson;
     padding:2px;
     cursor:pointer;
   }
@@ -339,7 +339,7 @@ table td,th{
   }
   .booking input{
     text-align:center;
-    border:0;
+    border:1px solid white;
     background:none;
     box-shadow:0px 0px 15px crimson;
     border-radius:10px; 
@@ -347,6 +347,7 @@ table td,th{
   }
   .booking textarea{
     resize: none;
+	  border:1px solid crimson
     border-radius:15px;
     color:white;
     background:transparent;
