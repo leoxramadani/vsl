@@ -482,7 +482,7 @@ th {
 .flip-box {
   background-color: transparent;
   width: 350px;
-  height: 1700px;
+  height: 200px;
   border: 3px solid crimson;
   perspective: 1000px;
   border-radius: 10px;
